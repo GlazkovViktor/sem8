@@ -1,12 +1,24 @@
 import model
 
 
+
 def input_class():
     return input('С каким классом работем? ').upper()
 
 
 def input_subject():
-    return input('Какой предмет? ').lower()
+    our_subject = str(input('Какой предмет? ').lower()) 
+    if our_subject.startswith('ли'):
+        subject = 'литература'
+        return subject
+    if our_subject.startswith('ма'):
+        subject = 'математика'
+        return subject
+    if our_subject.startswith('ру'):
+        subject = 'русский язык'
+        return subject
+    else:
+        print('такого предмета нет, проверьте что написали ')
 
     
 

@@ -1,3 +1,4 @@
+import os
 journal = {}
 subject = ''
 path = ''
@@ -5,6 +6,13 @@ path = ''
 def set_class(class_path: str):
     global path
     path = class_path + '.txt'
+    if os.path.exists(path):
+        if os.path.isfile(path):
+            print('\nКласс введен верно\n ')
+    else:
+        print('\nВведите корректно номер класса\n')
+
+
 
 def set_subject(our_subject: str):
     global subject
