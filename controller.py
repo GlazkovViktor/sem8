@@ -1,7 +1,6 @@
 import view
 import model
 
-
 def start():
     model.set_class(view.input_class())
     model.set_subject(view.input_subject())
